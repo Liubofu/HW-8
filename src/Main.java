@@ -68,24 +68,27 @@ public class Main {
 
         int[] inputArray4 = {15, 23, 48, -2, 0};
         boolean outputArray4 = true;
-        for (int i = 0; i < inputArray4.length; i++) {
-            if (inputArray4[i] < 0) {
+        for (int number : inputArray4) {
+            if (number < 0) {
                 outputArray4 = false;
                 break;
             }
         }
-        System.out.println(Arrays.toString(inputArray4));
         System.out.println(outputArray4);
 
         System.out.println("Задание 5! ");
 
-        int[] inputArray5 = {100_000, 49_000, 48_500, 50_000, 35_000};
-        int outputArray5 = 0; //назначаем счетчик
-        for (int number : inputArray5) {
-            if (number > 0);
-            outputArray5++;
+        int[] inputArray5 = {100_000, 49_000, 5_000, 50_000, 35_000};
+        boolean found = false;
+        System.out.println("Отрицательная прибыль:");
+        for (int outputArray5 : inputArray5) {
+            if (outputArray5 < 0) {
+                System.out.println(outputArray5);
+                found = true;
+            }
         }
-        System.out.println(Arrays.toString(inputArray5));
-        System.out.println("Количество месяцев с положительной прибылью: " + outputArray5);
+        if (!found) {
+            System.out.println("Отрицательных элементов не найдено.");
+        }
     }
 }
