@@ -47,20 +47,23 @@ public class Main {
             index++;
         }
         System.out.println("Зарплаты - " + Arrays.toString(inputArray2));
-        System.out.println("Налогb - " + Arrays.toString(outputArray2));
+        System.out.println("Налоги - " + Arrays.toString(outputArray2));
 
         System.out.println("Задание 3!");
-
-        int[] inputArray3 = {5_200, 4_800, 3_400, 6_000, 5_100};
-        boolean[] outputArray3 = new boolean[5];
-        for (int i = 0; i < inputArray3.length; i++) {
-            if (inputArray3[i] > 5000) {
-                outputArray3[i] = true;
-            } else {
-                outputArray3[i] = false;
+        int[] inputArray3 = {5_200, 4_800, 3_400, 6_000, 5_100};// ищем бонус свыше 5000
+        boolean outputArray3 = false;
+        for (int num : inputArray3) {
+            if (num > 5000) {
+                outputArray3 = true;
+                break;
             }
-            System.out.println(outputArray3[i]);
         }
+        if (outputArray3) {
+            System.out.println("В массиве есть бонусы свыше 5000.");
+        } else {
+            System.out.println("В массиве нет бонусов свыше 5000.");
+        }
+
         System.out.println("Задание 4!");
 
         int[] inputArray4 = {15, 23, 48, -2, 0};
