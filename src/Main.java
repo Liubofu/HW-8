@@ -7,34 +7,30 @@ public class Main {
         System.out.println("Задание 1!");
 
         int[] inputArray1 = {70, 400, 100, 250, 200};
-        int sumPay = 0; //сумма выплат
-        int maxPay = 0; //макс выплата
         int minPay = 401; //мин выплата
-        double midPay = 0; //среднее значение
-        for (int element : inputArray1) {
-            sumPay = sumPay + element; // узнаем сумму выплат
+        int maxPay = 0; //макс выплата
+        int sumPay = 0; //сумма выплат
+        int count = 0;
+        for (int min : inputArray1) {
+            if (min < minPay) { //узнаем минимальную выплату
+                minPay = min;
+            }
         }
-
         for (int max : inputArray1) {
             if (max > maxPay) { //узнаем максимальную выплату
                 maxPay = max;
             }
         }
-
-        for (int i = 0; i < inputArray1.length; i++) {
-            if (inputArray1[i] < minPay) { //узнаем минимальную выплату
-                minPay = inputArray1[i];
-            }
+        for (int element : inputArray1) {
+            sumPay += element; // узнаем сумму выплат
+            count++;
         }
-
-        for (double mid : inputArray1) { //узнаем среднее значение выплат
-            midPay = sumPay / inputArray1.length;
-        }
+        double midPay = (double) sumPay / count; //среднее значение
 
         double[] outputArray1 = new double[4];
-        outputArray1[0] = sumPay;
+        outputArray1[0] = minPay;
         outputArray1[1] = maxPay;
-        outputArray1[2] = minPay;
+        outputArray1[2] = sumPay;
         outputArray1[3] = midPay;
 
         System.out.println(Arrays.toString(inputArray1));
