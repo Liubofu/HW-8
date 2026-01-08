@@ -38,14 +38,16 @@ public class Main {
 
         System.out.println("Задание 2!");
 
-        int[] inputArray2 = {35_000, 43_500, 41_000, 54_400, 39_800};
-        float[] outputArray2 = new float[5];
-        for (int i = 0; i < inputArray2.length; i++) {
-            float tax = inputArray2[i] * 0.13f;
-            outputArray2[i] = tax;
+        double[] inputArray2 = {35_000, 43_500, 41_000, 54_400, 39_800};
+        double[] outputArray2 = new double[inputArray2.length];
+        double taxRate = 0.13; //ставка налога 13%
+        int index = 0;
+        for (double number : inputArray2) {
+            outputArray2[index] = number * taxRate;
+            index++;
         }
-        System.out.println(Arrays.toString(inputArray2));
-        System.out.println(Arrays.toString(outputArray2));
+        System.out.println("Зарплаты - " + Arrays.toString(inputArray2));
+        System.out.println("Налогb - " + Arrays.toString(outputArray2));
 
         System.out.println("Задание 3!");
 
