@@ -7,21 +7,17 @@ public class Main {
         System.out.println("Задание 1!");
 
         int[] inputArray1 = {70, 400, 100, 250, 200};
-        int minPay = 401; //мин выплата
-        int maxPay = 0; //макс выплата
+        int minPay = inputArray1[0]; //мин выплата
+        int maxPay = inputArray1[0]; //макс выплата
         int sumPay = 0; //сумма выплат
         int count = 0;
-        for (int min : inputArray1) {
-            if (min < minPay) { //узнаем минимальную выплату
-                minPay = min;
-            }
-        }
-        for (int max : inputArray1) {
-            if (max > maxPay) { //узнаем максимальную выплату
-                maxPay = max;
-            }
-        }
         for (int element : inputArray1) {
+            if (element < minPay) { //узнаем минимальную выплату
+                minPay = element;
+            }
+            if (element > maxPay) { //узнаем максимальную выплату
+                maxPay = element;
+            }
             sumPay += element; // узнаем сумму выплат
             count++;
         }
@@ -50,45 +46,44 @@ public class Main {
         System.out.println("Налоги - " + Arrays.toString(outputArray2));
 
         System.out.println("Задание 3!");
-        int[] inputArray3 = {5_200, 4_800, 3_400, 6_000, 5_100};// ищем бонус свыше 5000
-        boolean outputArray3 = false;
-        for (int num : inputArray3) {
-            if (num > 5000) {
-                outputArray3 = true;
-                break;
+        int[] inputArray3 = {5_200, 4_800, 3_400, 6_000, 5_100};
+        boolean[] outputArray3 = new boolean[5];
+        int step = 0;
+        for (int value : inputArray3) {
+            if (value > 5000) {
+                outputArray3[step] = true;
+            } else {
+                outputArray3[step] = false;
             }
+            step++;
         }
-        if (outputArray3) {
-            System.out.println("В массиве есть бонусы свыше 5000.");
-        } else {
-            System.out.println("В массиве нет бонусов свыше 5000.");
-        }
+        System.out.println(Arrays.toString(inputArray3));
+        System.out.println(Arrays.toString(outputArray3));
 
         System.out.println("Задание 4!");
 
         int[] inputArray4 = {15, 23, 48, -2, 0};
-        boolean outputArray4 = true;
+        boolean[] outputArray4 = new boolean[1];
+        outputArray4[0] = true;
         for (int number : inputArray4) {
             if (number < 0) {
-                outputArray4 = false;
+                outputArray4[0] = false;
                 break;
             }
         }
-        System.out.println(outputArray4);
+
+        System.out.println(Arrays.toString(inputArray4));
+        System.out.println(Arrays.toString(outputArray4));
 
         System.out.println("Задание 5! ");
 
         int[] inputArray5 = {100_000, 49_000, 5_000, 50_000, 35_000};
-        boolean found = false;
-        System.out.println("Отрицательная прибыль:");
-        for (int outputArray5 : inputArray5) {
-            if (outputArray5 < 0) {
-                System.out.println(outputArray5);
-                found = true;
+        boolean[] outputArray5 = new boolean[1];
+        for (int element : inputArray5) {
+            if (element < 0) {
+                outputArray5[0] = true;
             }
-        }
-        if (!found) {
-            System.out.println("Отрицательных элементов не найдено.");
-        }
+        } System.out.println(Arrays.toString(inputArray5));
+        System.out.println(Arrays.toString(outputArray5));
     }
 }
