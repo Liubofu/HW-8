@@ -84,7 +84,17 @@ public class Main {
             if (profit > 0) {
             }
             profitMonth++;
-        } System.out.println(Arrays.toString(inputArray5));
+        }
+        System.out.println(Arrays.toString(inputArray5));
         System.out.println(Arrays.toString(outputArray5));
+
+        //Задание 5 дубль
+
+        int[] inputArray6 = {100_000, 49_000, -5_000, 50_000, 35_000};
+        for (int num : inputArray6) {
+            if (num > 0) {
+                System.out.println(num);
+            }
+        }
     }
 }
