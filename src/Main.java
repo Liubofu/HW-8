@@ -80,7 +80,7 @@ public class Main {
         int[] inputArray5 = {100_000, 49_000, -5_000, 50_000, 35_000};
         boolean[] outputArray5 = new boolean[inputArray5.length];
         int profitMonth = 0;
-        for (int profit : inputArray3) {
+        for (int profit : inputArray5) {
             if (profit > 0) {
                 outputArray5[profitMonth] = true;
             } else {
