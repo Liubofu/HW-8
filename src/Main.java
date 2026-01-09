@@ -78,10 +78,13 @@ public class Main {
         System.out.println("Задание 5! ");
 
         int[] inputArray5 = {100_000, 49_000, -5_000, 50_000, 35_000};
-        int[] outputArray5 = new int[5];
+        boolean[] outputArray5 = new boolean[inputArray5.length];
         int profitMonth = 0;
-        for (int profit : inputArray5) {
+        for (int profit : inputArray3) {
             if (profit > 0) {
+                outputArray5[profitMonth] = true;
+            } else {
+                outputArray5[profitMonth] = false;
             }
             profitMonth++;
         }
