@@ -47,7 +47,7 @@ public class Main {
 
         System.out.println("Задание 3!");
         int[] inputArray3 = {5_200, 4_800, 3_400, 6_000, 5_100};
-        boolean[] outputArray3 = new boolean[5];
+        boolean[] outputArray3 = new boolean[inputArray3.length];
         int step = 0;
         for (int value : inputArray3) {
             if (value > 5000) {
@@ -77,12 +77,13 @@ public class Main {
 
         System.out.println("Задание 5! ");
 
-        int[] inputArray5 = {100_000, 49_000, 5_000, 50_000, 35_000};
-        boolean[] outputArray5 = new boolean[1];
-        for (int element : inputArray5) {
-            if (element < 0) {
-                outputArray5[0] = true;
+        int[] inputArray5 = {100_000, 49_000, -5_000, 50_000, 35_000};
+        int[] outputArray5 = new int[5];
+        int profitMonth = 0;
+        for (int profit : inputArray5) {
+            if (profit > 0) {
             }
+            profitMonth++;
         } System.out.println(Arrays.toString(inputArray5));
         System.out.println(Arrays.toString(outputArray5));
     }
