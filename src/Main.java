@@ -78,26 +78,16 @@ public class Main {
         System.out.println("Задание 5! ");
 
         int[] inputArray5 = {100_000, 49_000, -5_000, 50_000, 35_000};
-        boolean[] outputArray5 = new boolean[inputArray5.length];
+        int[] arrayInt = new int[1];
         int profitMonth = 0;
         for (int profit : inputArray5) {
             if (profit > 0) {
-                outputArray5[profitMonth] = true;
-            } else {
-                outputArray5[profitMonth] = false;
+                profitMonth++;
             }
-            profitMonth++;
+            arrayInt[0] = profitMonth;
         }
+        int outputArray5 = profitMonth;
         System.out.println(Arrays.toString(inputArray5));
-        System.out.println(Arrays.toString(outputArray5));
-
-        //Задание 5 дубль
-
-        int[] inputArray6 = {100_000, 49_000, -5_000, 50_000, 35_000};
-        for (int num : inputArray6) {
-            if (num > 0) {
-                System.out.println(num);
-            }
-        }
+        System.out.println(outputArray5);
     }
 }
