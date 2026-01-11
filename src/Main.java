@@ -78,16 +78,16 @@ public class Main {
         System.out.println("Задание 5! ");
 
         int[] inputArray5 = {100_000, 49_000, -5_000, 50_000, 35_000};
-        int[] arrayInt = new int[1];
+        int[] outputArray5 = new int[1];
         int profitMonth = 0;
         for (int profit : inputArray5) {
             if (profit > 0) {
                 profitMonth++;
             }
-            arrayInt[0] = profitMonth;
         }
-        int outputArray5 = profitMonth;
+        outputArray5[0] = profitMonth;
+
         System.out.println(Arrays.toString(inputArray5));
-        System.out.println(outputArray5);
+        System.out.println(Arrays.toString(outputArray5));
     }
 }
